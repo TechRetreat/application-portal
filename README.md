@@ -1,24 +1,12 @@
-## README
+## application-portal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Code Climate](https://codeclimate.com/github/TechRetreat/application-portal/badges/gpa.svg)](https://codeclimate.com/github/TechRetreat/application-portal)
 
-Things you may want to cover:
+The application portal for Tech Retreat 2016. 
 
-* Ruby version
+Ensure you have ruby (>= 2.2.2) and rails installed.
 
-* System dependencies
+```
+$ bundle install
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
