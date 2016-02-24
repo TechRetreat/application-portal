@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '>= 5.0.0.beta2', '< 5.1'
 # Use sqlite3 as the database for Active Record
@@ -44,3 +43,8 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Auth!
+# Check it from master because installing the rubygem does not work right now.
+# We're using  Rails5 and it seems to be too edgy for the latest stable version
+gem 'devise', :github => 'plataformatec/devise', :branch => 'master'
