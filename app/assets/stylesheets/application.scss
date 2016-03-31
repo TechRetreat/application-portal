@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+@import "variables";
+@import "fonts";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,400italic);
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1em;
+  @include OpenSans;
+}
