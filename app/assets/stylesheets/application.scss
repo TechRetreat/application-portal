@@ -15,28 +15,8 @@
  */
 
 @import "variables";
+@import "fonts";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,400italic);
-
-$primary: #41286B;
-$primary-alpha: rgba(65, 40, 107, 0.4);
-$primary-shade: #21084B;
-$secondary: #66C2A6;
-$light: #fff;
-$light-shade: #eee;
-$accent: #F07C6C;
-$accent-light: #F39E8E;
-$dark: #111;
-
-
-@mixin OpenSans {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 400;
-}
-
-@mixin OpenSansLight {
-  font-family: "Open Sans", Arial, sans-serif;
-  font-weight: 300;
-}
 
 body {
   padding: 0;
