@@ -21,6 +21,31 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br />
+    <%= f.text_field :last_name  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_completed_grade %><br />
+    <%= f.text_field :last_completed_grade  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :allergies %><br />
+    <%= f.text_field :allergies  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :food_preferences %><br />
+    <%= f.text_field :food_preferences  %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
