@@ -9,44 +9,6 @@
 
 @import "variables";
 
-// Taken from main site styles
-.button, a.button {
-  cursor: pointer;
-  display: inline-block;
-  border: 0;
-  padding: 0.6em 1.1em;
-  margin: 0.3em;
-  border-radius: 0.3em;
-  -webkit-font-smoothing: antialiased;
-  transform: translate3d( 0, 0, 0);
-  background-color: $light;
-  color: $dark;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0,1.5,0.5,1);
-}
-.button:hover {
-  transform: scale(1.1) translate3d( 0, 0, 0 );
-}
-.button--primary, a.button--primary {
-  font-size: 1.2em;
-  background-color:$secondary;
-  color: $light;
-}
-.button--secondary, a.button--secondary {
-  background-color:$accent;
-  color: $light;
-}
-.button--social, a.button--social {
-  padding-left: 0.6em;
-  padding-right: 0.6em;
-  min-width: 1em;
-}
-.button--simple, a.button--simple {
-  font-weight: normal;
-  background-color: transparent;
-  color: $light;
-}
-
 .landing{
   height: 100vh;
   display: flex;

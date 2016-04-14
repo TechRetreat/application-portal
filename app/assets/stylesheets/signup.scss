@@ -1,4 +1,5 @@
 @import "variables";
+@import "fonts";
 
 .signup {
   position: absolute;
@@ -9,6 +10,11 @@
   overflow: scroll;
   background-color: $primary;
   color: $light;
+
+  h1 {
+    font-size: 3em;
+    @include OpenSansLight;
+  }
 }
 .screen {
   flex: 0;
@@ -28,12 +34,34 @@
 
   &.screen--future {
     height: 0;
+    .screen__nav {
+      opacity: 0;
+      transform: translateY(10vh);
+    }
   }
   &.screen--closed {
     margin-top: -100vh;
+    opacity: 0;
+  }
+
+  .field {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    font-size: 1.3em;
+    margin: 0.5em 0;
+
+    label {
+      flex: 1;
+    }
+    input {
+      flex: 2;
+    }
   }
 
   .screen__nav {
+    transition: all ease-in-out 0.4s;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;

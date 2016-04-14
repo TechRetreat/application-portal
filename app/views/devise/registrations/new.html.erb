@@ -1,20 +1,20 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "signup"}) do |f| %>
   <div class="screen" data-screen="0">
-    <h2>Sign up</h2>
+    <h1>Sign up</h1>
     <%= devise_error_messages! %>
 
     <div class="field">
-      <%= f.label :first_name %><br />
+      <%= f.label :first_name %>
       <%= f.text_field :first_name  %>
     </div>
 
     <div class="field">
-      <%= f.label :last_name %><br />
+      <%= f.label :last_name %>
       <%= f.text_field :last_name  %>
     </div>
 
     <div class="screen__nav">
-      <button type='button' class="signup__next">Next</button>
+      <button type='button' class="button signup__next">Next</button>
     </div>
   </div>
 
@@ -24,55 +24,52 @@
     </div>
 
     <div class="screen__nav">
-      <button type='button' class="signup__prev">Back</button>
-      <button type='button' class="signup__next">Next</button>
+      <button type='button' class="button signup__prev">Back</button>
+      <button type='button' class="button signup__next">Next</button>
     </div>
   </div>
 
   <div class="screen screen--future" data-screen="2">
     <div class="field">
-      <%= f.label :last_completed_grade %><br />
+      <%= f.label :last_completed_grade %>
       <%= f.text_field :last_completed_grade  %>
     </div>
 
     <div class="field">
-      <%= f.label :allergies %><br />
+      <%= f.label :allergies %>
       <%= f.text_field :allergies  %>
     </div>
 
     <div class="field">
-      <%= f.label :food_preferences %><br />
+      <%= f.label :food_preferences %>
       <%= f.text_field :food_preferences  %>
     </div>
 
     <div class="screen__nav">
-      <button type='button' class="signup__prev">Back</button>
-      <button type='button' class="signup__next">Next</button>
+      <button type='button' class="button signup__prev">Back</button>
+      <button type='button' class="button signup__next">Next</button>
     </div>
   </div>
 
   <div class="screen screen--future" data-screen="3">
     <div class="field">
-      <%= f.label :email %><br />
+      <%= f.label :email %>
       <%= f.email_field :email, autofocus: true %>
     </div>
 
     <div class="field">
       <%= f.label :password %>
-      <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
-      <% end %><br />
       <%= f.password_field :password, autocomplete: "off" %>
     </div>
 
     <div class="field">
-      <%= f.label :password_confirmation %><br />
+      <%= f.label :password_confirmation %>
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
     </div>
 
     <div class="screen__nav">
-      <button type='button' class="signup__prev">Back</button>
-      <%= f.submit "Done!", class: "signup__done" %>
+      <button type='button' class="button signup__prev">Back</button>
+      <%= f.submit "Done!", class: "button signup__done" %>
     </div>
   </div>
 
