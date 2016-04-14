@@ -5,4 +5,8 @@ Rails.application.routes.draw do
 
   # Serve websocket cable requests in-process
   # mount ActionCable.server => '/cable'
+
+  as :user do
+    get '/apply' => 'devise/registrations#new'
+  end
 end
