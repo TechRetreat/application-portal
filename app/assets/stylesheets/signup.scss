@@ -1,0 +1,42 @@
+@import "variables";
+
+.signup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: scroll;
+  background-color: $primary;
+  color: $light;
+}
+.screen {
+  flex: 0;
+  overflow: hidden;
+  height: 100vh;
+  margin-top:0;
+  transition: all ease-in-out 0.4s;
+  padding: 0 2em;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.screen--future {
+    height: 0;
+  }
+  &.screen--closed {
+    margin-top: -100vh;
+  }
+
+  .screen__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em 0;
+  }
+}

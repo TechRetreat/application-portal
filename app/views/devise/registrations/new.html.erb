@@ -1,54 +1,81 @@
-<h2>Sign up</h2>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: "signup"}) do |f| %>
+  <div class="screen" data-screen="0">
+    <h2>Sign up</h2>
+    <%= devise_error_messages! %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <div class="field">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name  %>
+    </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <div class="field">
+      <%= f.label :last_name %><br />
+      <%= f.text_field :last_name  %>
+    </div>
+
+    <div class="screen__nav">
+      <button type='button' class="signup__next">Next</button>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+  <div class="screen screen--future" data-screen="1">
+    <div class="field">
+      Add more stuff here
+    </div>
+
+    <div class="screen__nav">
+      <button type='button' class="signup__prev">Back</button>
+      <button type='button' class="signup__next">Next</button>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="screen screen--future" data-screen="2">
+    <div class="field">
+      <%= f.label :last_completed_grade %><br />
+      <%= f.text_field :last_completed_grade  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :allergies %><br />
+      <%= f.text_field :allergies  %>
+    </div>
+
+    <div class="field">
+      <%= f.label :food_preferences %><br />
+      <%= f.text_field :food_preferences  %>
+    </div>
+
+    <div class="screen__nav">
+      <button type='button' class="signup__prev">Back</button>
+      <button type='button' class="signup__next">Next</button>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :first_name %><br />
-    <%= f.text_field :first_name  %>
+  <div class="screen screen--future" data-screen="3">
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "off" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    </div>
+
+    <div class="screen__nav">
+      <button type='button' class="signup__prev">Back</button>
+      <%= f.submit "Done!", class: "signup__done" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :last_name %><br />
-    <%= f.text_field :last_name  %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_completed_grade %><br />
-    <%= f.text_field :last_completed_grade  %>
-  </div>
-
-  <div class="field">
-    <%= f.label :allergies %><br />
-    <%= f.text_field :allergies  %>
-  </div>
-
-  <div class="field">
-    <%= f.label :food_preferences %><br />
-    <%= f.text_field :food_preferences  %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+<%# render "devise/shared/links" %>
